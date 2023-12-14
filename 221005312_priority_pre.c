@@ -41,7 +41,7 @@ void waitingTime(int P[], int n, int AT[], int BT[], int WT[], int Pr[])
         for (int i = 0; i < n; i++)
         {
 
-            if (AT[i] <= t && rem_bt[i] > 0 && (Pr[i] > m || (Pr[i] == m && AT[i] < AT[s]) || (Pr[i] == m && AT[i] == AT[s] && P[i] < P[s])))
+            if (AT[i] <= t && rem_bt[i] > 0 && (s == -1 || Pr[i] < Pr[s] || (Pr[i] == Pr[s] && AT[i] < AT[s]) || (Pr[i] == Pr[s] && AT[i] == AT[s] && P[i] < P[s])))
             {
                 m = Pr[i];
                 s = i;
